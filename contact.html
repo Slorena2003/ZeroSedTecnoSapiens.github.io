@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title>ZERO SED - Bebidas Naturales y Delivery Rápido</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="bebidas naturales, delivery rapido, jugos, smoothies, la paz bolivia, zero sed, hidratacion saludable" name="keywords">
+        <meta content="ZERO SED ofrece bebidas naturales y saludables con delivery rápido en el Macrodistrito Centro de La Paz. Refresca tu día sin complicaciones." name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid nav-bar">
+            <div class="container">
+                <nav class="navbar navbar-light navbar-expand-lg py-4">
+                    <a href="index.html" class="navbar-brand">
+                        <h1 class="text-primary fw-bold mb-0">ZERO <span class="text-dark">SED</span></h1>
+                    </a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto">
+                            <a href="index.html" class="nav-item nav-link ">Inicio</a>
+                            <a href="about.html" class="nav-item nav-link">Nosotros</a>
+                            <a href="service.html" class="nav-item nav-link ">Servicios</a>
+                            <a href="event.html" class="nav-item nav-link">Eventos</a>
+                            <a href="menu.html" class="nav-item nav-link">Nuestro Menú</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Secciones</a>
+                                <div class="dropdown-menu bg-light">
+                                    <a href="book.html" class="dropdown-item">Pedidos Online</a>
+                                    <a href="testimonial.html" class="dropdown-item ">Testimonios</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link active">Contacto</a>
+                        </div>
+                        <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                        <a href="book.html" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Pide Ahora</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+
+        <!-- Hero Start -->
+        <div class="container-fluid bg-light py-4">
+            <div class="container text-center animated bounceInDown">
+                <h1 class="display-1 mb-4">Contacto</h1>
+                <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
+                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="#">Páginas</a></li>
+                    <li class="breadcrumb-item text-dark" aria-current="page">Contacto</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+        <!-- Contact Start -->
+<div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="p-5 bg-light rounded contact-form">
+            <div class="row g-4">
+                <div class="col-12">
+                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Contáctanos</small>
+                    <h1 class="display-5 mb-0">¡Hablemos! Estamos para servirte</h1>
+                </div>
+                
+                <!-- Formulario + Info -->
+                <div class="col-md-6 col-lg-7">
+                    <p class="mb-4">¿Tienes dudas sobre nuestros productos, servicios para eventos o quieres hacer un pedido? Escríbenos por WhatsApp o completa el formulario. Te respondemos en minutos.</p>
+                    <form onsubmit="enviarFormularioWhatsApp(event)">
+                        <input type="text" id="contacto-nombre" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Tu Nombre" required>
+                        <input type="email" id="contacto-email" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Tu Email (opcional)">
+                        <input type="tel" id="contacto-telefono" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Tu Teléfono" required>
+                        <textarea id="contacto-mensaje" class="w-100 form-control mb-4 p-3 border-primary bg-light" rows="4" cols="10" placeholder="¿En qué podemos ayudarte? Pedidos, eventos, dudas..." required></textarea>
+                        <button class="w-100 btn btn-success form-control p-3 border-success bg-success rounded-pill" type="submit">
+                            <i class="fab fa-whatsapp me-2"></i>Enviar por WhatsApp
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Info de contacto -->
+                <div class="col-md-6 col-lg-5">
+                    <div>
+                        <div class="d-inline-flex w-100 border border-primary p-4 rounded mb-4">
+                            <i class="fas fa-store fa-2x text-primary me-4"></i>
+                            <div>
+                                <h4>Tienda Física</h4>
+                                <p>Calle Illampu N° 742, Esquina Sagárnaga</p>
+                                <small class="text-muted">Zona Comercial del Centro, La Paz</small>
+                            </div>
+                        </div>
+                        <div class="d-inline-flex w-100 border border-primary p-4 rounded mb-4">
+                            <i class="fab fa-whatsapp fa-2x text-success me-4"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p class="mb-2 fw-bold">62422889</p>
+                                <p class="mb-0 text-muted">Pedidos y cotizaciones</p>
+                            </div>
+                        </div>
+                        <div class="d-inline-flex w-100 border border-primary p-4 rounded mb-4">
+                            <i class="fas fa-envelope fa-2x text-primary me-4"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p class="mb-2">contacto@zerosed.bo</p>
+                                <p class="mb-0 text-muted">Para eventos corporativos</p>
+                            </div>
+                        </div>
+                        <div class="d-inline-flex w-100 border border-primary p-4 rounded">
+                            <i class="fa fa-clock fa-2x text-primary me-4"></i>
+                            <div>
+                                <h4>Horario</h4>
+                                <p class="mb-2">Lunes a Sábado: 8:00 - 20:00</p>
+                                <p class="mb-0">Domingo: 9:00 - 14:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+<!-- MAPA - Ubicación Tienda Física Start -->
+<div class="container-fluid py-4 wow bounceInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="text-center mb-4">
+            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Encuéntranos</small>
+            <h2 class="display-6">Visítanos en nuestra tienda</h2>
+            <p class="text-muted">Calle Illampu N° 742, Esquina Sagárnaga — <strong>Zona Comercial del Centro</strong></p>
+            <p class="text-muted small"><i class="fas fa-info-circle text-primary me-1"></i> A una cuadra de la Plaza San Francisco, frente al Mercado de las Brujas</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-8 col-md-12">
+                <div class="rounded overflow-hidden shadow-lg" style="border: 3px solid #198754;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956.4478342872672!2d-68.137042!3d-16.496579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f2076f7a2f0b7%3A0xbcb0a8a3c8f0f0f0!2sCalle%20Illampu%20%26%20Sag%C3%A1rnaga%2C%20La%20Paz%2C%20Bolivia!5e0!3m2!1ses!2sbo!4v1700000000000!5m2!1ses!2sbo"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Tienda ZERO SED - Calle Illampu 742, La Paz"
+                    ></iframe>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="bg-light rounded p-4 h-100 border border-primary">
+                    <h5 class="mb-3 text-primary"><i class="fas fa-directions me-2"></i>¿Cómo llegar?</h5>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-3">
+                            <i class="fas fa-bus text-primary me-2"></i>
+                            <strong>Minibus:</strong> Líneas Illampu, Sagárnaga o Primero de Mayo. Bajar en parada Mercado de las Brujas.
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-walking text-primary me-2"></i>
+                            <strong>A pie:</strong> Desde Plaza San Francisco, caminar 1 cuadra por Illampu hacia el norte.
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-taxi text-primary me-2"></i>
+                            <strong>Taxi:</strong> Pide que te deje en "Esquina Illampu y Sagárnaga, frente al Mercado de las Brujas".
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-motorcycle text-primary me-2"></i>
+                            <strong>Delivery:</strong> Si no puedes venir, ¡nosotros vamos a ti! Cobertura en todo el Macrodistrito Centro.
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/59162422889?text=Hola%20ZERO%20SED,%20quiero%20hacer%20un%20pedido%20a%20domicilio" class="btn btn-success w-100 rounded-pill">
+                        <i class="fab fa-whatsapp me-2"></i>Pedir Delivery
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Referencias cercanas -->
+        <div class="row g-4 mt-3">
+            <div class="col-lg-3 col-md-6">
+                <div class="bg-light rounded p-3 text-center border border-primary">
+                    <i class="fas fa-landmark fa-2x text-primary mb-2"></i>
+                    <h6 class="mb-1">Plaza San Francisco</h6>
+                    <p class="mb-0 text-muted small">A 1 cuadra</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="bg-light rounded p-3 text-center border border-primary">
+                    <i class="fas fa-shopping-bag fa-2x text-primary mb-2"></i>
+                    <h6 class="mb-1">Mercado de las Brujas</h6>
+                    <p class="mb-0 text-muted small">Frente a la tienda</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="bg-light rounded p-3 text-center border border-primary">
+                    <i class="fas fa-university fa-2x text-primary mb-2"></i>
+                    <h6 class="mb-1">UMSA Central</h6>
+                    <p class="mb-0 text-muted small">A 3 cuadras</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="bg-light rounded p-3 text-center border border-primary">
+                    <i class="fas fa-tree fa-2x text-primary mb-2"></i>
+                    <h6 class="mb-1">Parque Urbano</h6>
+                    <p class="mb-0 text-muted small">A 2 cuadras</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MAPA End -->
+
+<script>
+function enviarFormularioWhatsApp(e) {
+    e.preventDefault();
+    const nombre = document.getElementById('contacto-nombre').value;
+    const email = document.getElementById('contacto-email').value;
+    const telefono = document.getElementById('contacto-telefono').value;
+    const mensaje = document.getElementById('contacto-mensaje').value;
+    
+    let texto = '*📩 NUEVO MENSAJE - ZERO SED*%0A%0A';
+    texto += `*Nombre:* ${nombre}%0A`;
+    texto += `*Teléfono:* ${telefono}%0A`;
+    if (email) texto += `*Email:* ${email}%0A`;
+    texto += `*Mensaje:* ${mensaje}%0A`;
+    texto += `%0A_Enviado desde el formulario web_`;
+    
+    window.open(`https://wa.me/59162422889?text=${texto}`, '_blank');
+}
+</script>
+
+
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row">
+                    <!-- Columna 1: Branding -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h1 class="text-primary">ZERO<span class="text-dark">SED</span></h1>
+                            <p class="lh-lg mb-4">Bebidas naturales y saludables con delivery especializado en el Macrodistrito Centro de La Paz. Refresca tu día sin complicaciones.</p>
+                            <div class="footer-icon d-flex">
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href="https://facebook.com/zerosed"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href="https://tiktok.com/@zerosed"><i class="fab fa-tiktok"></i></a>
+                                <a href="https://instagram.com/zerosed" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i class="fab fa-instagram"></i></a>
+                                <a href="https://wa.me/591XXXXXXXX" class="btn btn-primary btn-sm-square rounded-circle"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna 2: Productos Principales -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Nuestros Productos</h4>
+                            <div class="d-flex flex-column align-items-start">
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Jugos de Frutas</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Jugos de Verduras</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Smoothies</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Bebidas Energizantes</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Mocktails</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Té Helado e Infusiones</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Aguas Saborizadas</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna 3: Contacto -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Contáctanos</h4>
+                            <div class="d-flex flex-column align-items-start">
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i> Macrodistrito Centro, La Paz, Bolivia</p>
+                                <p><i class="fa fa-phone-alt text-primary me-2"></i> (+591) 7XX-XXXXX</p>
+                                <p><i class="fas fa-envelope text-primary me-2"></i> contacto@zerosed.bo</p>
+                                <p><i class="fa fa-clock text-primary me-2"></i> Lunes a Sábado: 8:00 - 20:00</p>
+                                <p><i class="fab fa-whatsapp text-primary me-2"></i> Pedidos por WhatsApp Business</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna 4: Galería Social -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Galería</h4>
+                            <div class="row g-2">
+                                <div class="col-4">
+                                    <img src="img/fru01.png" class="img-fluid rounded-circle border border-primary p-2" alt="Jugo de Naranja">
+                                </div>
+                                <div class="col-4">
+                                    <img src="img/ver 02.png" class="img-fluid rounded-circle border border-primary p-2" alt="Smoothie Frutilla">
+                                </div>
+                                <div class="col-4">
+                                    <img src="img/mok 01.png" class="img-fluid rounded-circle border border-primary p-2" alt="Jugo Verde">
+                                </div>
+                                <div class="col-4">
+                                    <img src="img/te hel 04.png" class="img-fluid rounded-circle border border-primary p-2" alt="Mojito Zero">
+                                </div>
+                                <div class="col-4">
+                                    <img src="img/ener 02.png" class="img-fluid rounded-circle border border-primary p-2" alt="Energía Cítrica">
+                                </div>
+                                <div class="col-4">
+                                    <img src="img/smoo 02.png" class="img-fluid rounded-circle border border-primary p-2" alt="Agua Pepino-Limón">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>TECNOLOGIA DE LA INFORMACIÓN Y COMUNICACIÓN II</a>, TECNO SAPIENS </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-md-square btn-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>

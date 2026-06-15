@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title>ZERO SED - Bebidas Naturales y Delivery Rápido</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="bebidas naturales, delivery rapido, jugos, smoothies, la paz bolivia, zero sed, hidratacion saludable" name="keywords">
+        <meta content="ZERO SED ofrece bebidas naturales y saludables con delivery rápido en el Macrodistrito Centro de La Paz. Refresca tu día sin complicaciones." name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid nav-bar">
+            <div class="container">
+                <nav class="navbar navbar-light navbar-expand-lg py-4">
+                    <a href="index.html" class="navbar-brand">
+                        <h1 class="text-primary fw-bold mb-0">ZERO <span class="text-dark">SED</span></h1>
+                    </a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto">
+                            <a href="index.html" class="nav-item nav-link ">Inicio</a>
+                            <a href="about.html" class="nav-item nav-link">Nosotros</a>
+                            <a href="service.html" class="nav-item nav-link">Servicios</a>
+                            <a href="event.html" class="nav-item nav-link">Eventos</a>
+                            <a href="menu.html" class="nav-item nav-link">Nuestro Menú</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Secciones</a>
+                                <div class="dropdown-menu bg-light">
+                                    <a href="book.html" class="dropdown-item active">Pedidos Online</a>
+                                    <a href="testimonial.html" class="dropdown-item">Testimonios</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                        </div>
+                        <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                        <a href="book.html" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Pide Ahora</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+<!-- ============================================ -->
+<!-- SECCIÓN PEDIDOS ONLINE - ZERO SED            -->
+<!-- ============================================ -->
+
+<!-- Hero de Pedidos -->
+<section id="pedidos-hero" class="bg-light-blue py-6 mb-5" style="background: linear-gradient(135deg, #1B4E2A 0%, #61AE48 100%);">
+    <div class="container text-center">
+        <h1 class="display-2 text-white mb-3">Haz tu Pedido Online</h1>
+        <p class="lead text-white">Refresca tu día sin complicaciones • Delivery en Macrodistrito Centro</p>
+        <!-- Botón de WhatsApp en el Hero -->
+        <a href="https://wa.me/59162422889?text=Hola%20ZERO%20SED,%20quiero%20hacer%20un%20pedido" 
+        class="btn btn-light btn-lg rounded-pill mt-3">
+        <i class="fab fa-whatsapp me-2"></i>Pedir por WhatsApp
+        </a>
+    </div>
+</section>
+<!-- Hero Start -->
+<div class="container-fluid bg-light py-6 my-6 mt-0">
+    <div class="container text-center animated bounceInDown">
+        <h1 class="display-1 mb-4">Pedido Online</h1>
+        <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
+            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="#">Secciones</a></li>
+            <li class="breadcrumb-item text-dark" aria-current="page">Pedido</li>
+        </ol>
+    </div>
+</div>
+<!-- Hero End -->
+
+<!-- Filtros de Categorías -->
+<section id="menu-filtros" class="container mb-4">
+    <div class="d-flex flex-wrap justify-content-center gap-2">
+        <button class="btn btn-primary active rounded-pill px-4" onclick="filtrarMenu('todos')">Todos</button>
+        <button class="btn btn-outline-primary rounded-pill px-4" onclick="filtrarMenu('jugos-fruta')">Jugos de Frutas</button>
+        <button class="btn btn-outline-primary rounded-pill px-4" onclick="filtrarMenu('jugos-verdura')">Jugos de Verduras</button>
+        <button class="btn btn-outline-primary rounded-pill px-4" onclick="filtrarMenu('smoothies')">Smoothies</button>
+        <button class="btn btn-outline-primary rounded-pill px-4" onclick="filtrarMenu('energizantes')">Energizantes</button>
+        <button class="btn btn-outline-primary rounded-pill px-4" onclick="filtrarMenu('mocktails')">Mocktails</button>
+        <button class="btn btn-outline-primary rounded-pill px-4" onclick="filtrarMenu('te-infusiones')">Té Helado e Infusiones</button>
+        <button class="btn btn-outline-primary rounded-pill px-4" onclick="filtrarMenu('aguas')">Aguas Saborizadas</button>
+    </div>
+</section>
+
+<!-- Carrito Flotante -->
+<div id="carrito-flotante" class="position-fixed bottom-0 end-0 m-4 z-3" style="display: none;">
+    <button class="btn btn-primary btn-lg rounded-circle shadow-lg position-relative" onclick="mostrarCarrito()" style="width: 60px; height: 60px;">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+    </button>
+</div>
+
+<!-- Modal del Carrito -->
+<div class="modal fade" id="modalCarrito" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title"><i class="fas fa-shopping-cart me-2"></i>Tu Pedido - ZERO SED</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="items-carrito"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5>Total:</h5>
+                    <h4 class="text-primary fw-bold" id="total-carrito">Bs. 0,00</h4>
+                </div>
+                <div class="mt-3">
+                    <label class="form-label">Dirección de entrega (Macrodistrito Centro):</label>
+                    <input type="text" id="direccion-entrega" class="form-control" placeholder="Ej: Calle Mercado 123, Edificio X">
+                </div>
+                <div class="mt-3">
+                    <label class="form-label">Teléfono de contacto:</label>
+                    <input type="tel" id="telefono-pedido" class="form-control" placeholder="Ej: 7XX-XXXXX">
+                </div>
+                <div class="mt-3">
+                    <label class="form-label">Notas adicionales:</label>
+                    <textarea id="notas-pedido" class="form-control" rows="2" placeholder="Sin azúcar, extra hielo, etc."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" onclick="vaciarCarrito()">Vaciar</button>
+                <button type="button" class="btn btn-success btn-lg" onclick="enviarPedidoWhatsApp()">
+                    <i class="fab fa-whatsapp me-2"></i>Enviar Pedido por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- MENÚ DE PRODUCTOS                            -->
+<!-- ============================================ -->
+
+<section id="menu-productos" class="container padding-large pb-5">
+
+    <!-- JUGOS DE FRUTAS -->
+    <div class="categoria-menu mb-5" data-categoria="jugos-fruta">
+        <h2 class="display-6 text-uppercase text-dark mb-4 border-bottom border-primary pb-2">
+            <i class="fas fa-apple-alt text-primary me-2"></i>Jugos de Frutas
+        </h2>
+        <div class="row g-4">
+            <!-- Producto -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/fru 01.png" alt="Jugo Naranja Pura" class="img-fluid rounded-top">
+                        <span class="badge bg-success position-absolute top-0 start-0 m-2">Más Vendido</span>
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Naranja Pura</h5>
+                        <p class="text-muted small mb-2">Exprimido al momento, sin azúcar. Vitamina C natural.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-primary fw-bold fs-5">Bs. 10,00</span>
+                            <button class="btn btn-primary btn-sm rounded-pill" onclick="agregarAlCarrito('Naranja Pura', 10.00, 'Jugo de Fruta')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/fru02.png" alt="Jugo Frutilla Fresh" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Frutilla Fresh</h5>
+                        <p class="text-muted small mb-2">Frutillas frescas con toque de limón.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-primary fw-bold fs-5">Bs. 10,00</span>
+                            <button class="btn btn-primary btn-sm rounded-pill" onclick="agregarAlCarrito('Frutilla Fresh', 10.00, 'Jugo de Fruta')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/fru03.png" alt="Jugo Piña Tropical" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Piña Tropical</h5>
+                        <p class="text-muted small mb-2">Piña jugosa con hojas de menta fresca.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-primary fw-bold fs-5">Bs. 10,00</span>
+                            <button class="btn btn-primary btn-sm rounded-pill" onclick="agregarAlCarrito('Piña Tropical', 10.00, 'Jugo de Fruta')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/fru04.png" alt="Jugo Manzana Verde" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Manzana Verde</h5>
+                        <p class="text-muted small mb-2">Manzana verde con jengibre. Ideal post-ejercicio.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-primary fw-bold fs-5">Bs. 10,00</span>
+                            <button class="btn btn-primary btn-sm rounded-pill" onclick="agregarAlCarrito('Manzana Verde', 10.00, 'Jugo de Fruta')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/fru05.png" alt="Jugo Sandía Cool" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Sandía Cool</h5>
+                        <p class="text-muted small mb-2">Sandía madura con hierbabuena. Hidratación pura.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-primary fw-bold fs-5">Bs. 10,00</span>
+                            <button class="btn btn-primary btn-sm rounded-pill" onclick="agregarAlCarrito('Sandía Cool', 10.00, 'Jugo de Fruta')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/fru06.png" alt="Jugo Papaya Energía" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Papaya Energía</h5>
+                        <p class="text-muted small mb-2">Papaya cremosa con naranja. Desayuno completo.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-primary fw-bold fs-5">Bs. 10,00</span>
+                            <button class="btn btn-primary btn-sm rounded-pill" onclick="agregarAlCarrito('Papaya Energía', 10.00, 'Jugo de Fruta')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JUGOS DE VERDURAS -->
+    <div class="categoria-menu mb-5" data-categoria="jugos-verdura">
+        <h2 class="display-6 text-uppercase text-dark mb-4 border-bottom border-success pb-2">
+            <i class="fas fa-leaf text-success me-2"></i>Jugos de Verduras
+        </h2>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/ver 01.png" alt="Jugo Verde Clásico" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Verde Clásico</h5>
+                        <p class="text-muted small mb-2">Apio, pepino, manzana verde y limón. Limpieza suave.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-success fw-bold fs-5">Bs. 10,00</span>
+                            <button class="btn btn-success btn-sm rounded-pill" onclick="agregarAlCarrito('Verde Clásico', 10.00, 'Jugo de Verdura')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/ver 02.png" alt="Zanahoria Power" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Zanahoria Power</h5>
+                        <p class="text-muted small mb-2">Zanahoria, naranja y jengibre. Beta-caroteno natural.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-success fw-bold fs-5">Bs. 10,00</span>
+                            <button class="btn btn-success btn-sm rounded-pill" onclick="agregarAlCarrito('Zanahoria Power', 10.00, 'Jugo de Verdura')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/ver 03.png" alt="Detox Pepino" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Detox Pepino</h5>
+                        <p class="text-muted small mb-2">Pepino, apio, limón y menta. Alcalino y ligero.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-success fw-bold fs-5">Bs. 10,00</span>
+                            <button class="btn btn-success btn-sm rounded-pill" onclick="agregarAlCarrito('Detox Pepino', 10.00, 'Jugo de Verdura')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SMOOTHIES -->
+    <div class="categoria-menu mb-5" data-categoria="smoothies">
+        <h2 class="display-6 text-uppercase text-dark mb-4 border-bottom border-warning pb-2">
+            <i class="fas fa-blender text-warning me-2"></i>Smoothies
+        </h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/smoo 01.png" alt="Smoothie Frutilla-Plátano" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Frutilla-Plátano</h5>
+                        <p class="text-muted small mb-2">Frutillas, plátano y yogurt natural. Textura cremosa.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-warning fw-bold fs-5">Bs. 13,00</span>
+                            <button class="btn btn-warning btn-sm rounded-pill text-dark" onclick="agregarAlCarrito('Smoothie Frutilla-Plátano', 13.00, 'Smoothie')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/smoo 02.png" alt="Smoothie Tropical" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Tropical</h5>
+                        <p class="text-muted small mb-2">Piña, mango y leche de coco. Viaje tropical.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-warning fw-bold fs-5">Bs. 14,00</span>
+                            <button class="btn btn-warning btn-sm rounded-pill text-dark" onclick="agregarAlCarrito('Smoothie Tropical', 14.00, 'Smoothie')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/smoo 03.png" alt="Smoothie Verde Proteico" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Verde Proteico</h5>
+                        <p class="text-muted small mb-2">Espinaca, plátano, maní y leche. Energía sostenida.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-warning fw-bold fs-5">Bs. 14,00</span>
+                            <button class="btn btn-warning btn-sm rounded-pill text-dark" onclick="agregarAlCarrito('Smoothie Verde Proteico', 14.00, 'Smoothie')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENERGIZANTES -->
+    <div class="categoria-menu mb-5" data-categoria="energizantes">
+        <h2 class="display-6 text-uppercase text-dark mb-4 border-bottom border-danger pb-2">
+            <i class="fas fa-bolt text-danger me-2"></i>Bebidas Energizantes
+        </h2>
+        <div class="row g-4">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/ener 01.png" alt="Energía Cítrica" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Energía Cítrica</h5>
+                        <p class="text-muted small mb-2">Naranja, limón, jengibre y miel. Estimulante natural sin cafeína.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-danger fw-bold fs-5">Bs. 12,00</span>
+                            <button class="btn btn-danger btn-sm rounded-pill" onclick="agregarAlCarrito('Energía Cítrica', 12.00, 'Energizante')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/ener 02.png" alt="Power Maca" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Power Maca</h5>
+                        <p class="text-muted small mb-2">Maca andina, plátano, leche y canela. Superalimento ancestral.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-danger fw-bold fs-5">Bs. 12,50</span>
+                            <button class="btn btn-danger btn-sm rounded-pill" onclick="agregarAlCarrito('Power Maca', 12.50, 'Energizante')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOCKTAILS -->
+    <div class="categoria-menu mb-5" data-categoria="mocktails">
+        <h2 class="display-6 text-uppercase text-dark mb-4 border-bottom border-purple pb-2" style="border-color: #6f42c1 !important;">
+            <i class="fas fa-glass-cheers me-2" style="color: #6f42c1;"></i>Mocktails
+        </h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/mok 01.png" alt="Mojito Zero" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Mojito Zero</h5>
+                        <p class="text-muted small mb-2">Limón, menta, soda y jarabe natural. Cero alcohol.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price fw-bold fs-5" style="color: #6f42c1;">Bs. 15,00</span>
+                            <button class="btn btn-sm rounded-pill text-white" style="background-color: #6f42c1;" onclick="agregarAlCarrito('Mojito Zero', 15.00, 'Mocktail')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/mok 02.png" alt="Sunrise Tropical" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Sunrise Tropical</h5>
+                        <p class="text-muted small mb-2">Naranja, granadina natural y soda. Visualmente espectacular.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price fw-bold fs-5" style="color: #6f42c1;">Bs. 16,00</span>
+                            <button class="btn btn-sm rounded-pill text-white" style="background-color: #6f42c1;" onclick="agregarAlCarrito('Sunrise Tropical', 16.00, 'Mocktail')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/mok 03.png" alt="Berry Fizz" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Berry Fizz</h5>
+                        <p class="text-muted small mb-2">Frutilla, arándanos, soda y decoración floral. Elegancia pura.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price fw-bold fs-5" style="color: #6f42c1;">Bs. 16,00</span>
+                            <button class="btn btn-sm rounded-pill text-white" style="background-color: #6f42c1;" onclick="agregarAlCarrito('Berry Fizz', 16.00, 'Mocktail')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TÉ HELADO E INFUSIONES -->
+    <div class="categoria-menu mb-5" data-categoria="te-infusiones">
+        <h2 class="display-6 text-uppercase text-dark mb-4 border-bottom border-info pb-2">
+            <i class="fas fa-mug-hot text-info me-2"></i>Té Helado e Infusiones
+        </h2>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/te hel 01.png" alt="Té Helado Limón" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Té Helado Limón</h5>
+                        <p class="text-muted small mb-2">Té negro, limón fresco y endulzante natural.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-info fw-bold fs-5">Bs. 6,00</span>
+                            <button class="btn btn-info btn-sm rounded-pill text-white" onclick="agregarAlCarrito('Té Helado Limón', 6.00, 'Té Helado')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/te hel 02.png" alt="Té Helado Verde" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Té Helado Verde</h5>
+                        <p class="text-muted small mb-2">Té verde japonés, menta y miel. Antioxidante.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-info fw-bold fs-5">Bs. 7,00</span>
+                            <button class="btn btn-info btn-sm rounded-pill text-white" onclick="agregarAlCarrito('Té Helado Verde', 7.00, 'Té Helado')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/te hel 03.png" alt="Infusión Manzanilla" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Manzanilla Fría</h5>
+                        <p class="text-muted small mb-2">Manzanilla boliviana, miel y limón. Calma y refresca.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-info fw-bold fs-5">Bs. 4,50</span>
+                            <button class="btn btn-info btn-sm rounded-pill text-white" onclick="agregarAlCarrito('Manzanilla Fría', 4.50, 'Infusión')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/te hel 04.png" alt="Infusión Menta-Cedrón" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Menta-Cedrón</h5>
+                        <p class="text-muted small mb-2">Menta, cedrón y jengibre. Digestiva tradicional.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-info fw-bold fs-5">Bs. 5,00</span>
+                            <button class="btn btn-info btn-sm rounded-pill text-white" onclick="agregarAlCarrito('Menta-Cedrón', 5.00, 'Infusión')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AGUAS SABORIZADAS -->
+    <div class="categoria-menu mb-5" data-categoria="aguas">
+        <h2 class="display-6 text-uppercase text-dark mb-4 border-bottom border-secondary pb-2">
+            <i class="fas fa-tint text-secondary me-2"></i>Aguas Saborizadas
+        </h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/agua sab 01.png" alt="Agua de Frutilla" class="img-fluid rounded-top">
+                        <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Económico</span>
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Agua de Frutilla</h5>
+                        <p class="text-muted small mb-2">Agua purificada con frutillas frescas en infusión.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-secondary fw-bold fs-5">Bs. 5,00</span>
+                            <button class="btn btn-secondary btn-sm rounded-pill" onclick="agregarAlCarrito('Agua de Frutilla', 5.00, 'Agua Saborizada')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/agua sab 02.png" alt="Agua Pepino-Limón" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Pepino-Limón</h5>
+                        <p class="text-muted small mb-2">Pepino, limón y hierbabuena. La más refrescante.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-secondary fw-bold fs-5">Bs. 5,50</span>
+                            <button class="btn btn-secondary btn-sm rounded-pill" onclick="agregarAlCarrito('Agua Pepino-Limón', 5.50, 'Agua Saborizada')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="product-card position-relative h-100">
+                    <div class="image-holder">
+                        <img src="imgdes/agua sab 03.png" alt="Agua Naranja-Jengibre" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="card-title text-uppercase">Naranja-Jengibre</h5>
+                        <p class="text-muted small mb-2">Naranja en gajos con jengibre rallado. Digestiva.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="item-price text-secondary fw-bold fs-5">Bs. 5,50</span>
+                            <button class="btn btn-secondary btn-sm rounded-pill" onclick="agregarAlCarrito('Agua Naranja-Jengibre', 5.50, 'Agua Saborizada')">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- JAVASCRIPT DEL CARRITO                       -->
+<!-- ============================================ -->
+
+<script>
+// Carrito de compras
+let carrito = [];
+
+function agregarAlCarrito(nombre, precio, categoria) {
+    // Buscar si ya existe
+    const existente = carrito.find(item => item.nombre === nombre);
+    
+    if (existente) {
+        existente.cantidad++;
+    } else {
+        carrito.push({
+            nombre: nombre,
+            precio: precio,
+            categoria: categoria,
+            cantidad: 1
+        });
+    }
+    
+    actualizarCarrito();
+    
+    // Animación de feedback
+    const btn = event.target.closest('button');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-check"></i> ¡Agregado!';
+    btn.classList.add('btn-success');
+    setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.remove('btn-success');
+    }, 1500);
+}
+
+function actualizarCarrito() {
+    const contador = document.getElementById('contador-carrito');
+    const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+    contador.textContent = totalItems;
+    
+    // Mostrar/ocultar carrito flotante
+    document.getElementById('carrito-flotante').style.display = totalItems > 0 ? 'block' : 'none';
+}
+
+function mostrarCarrito() {
+    const modal = new bootstrap.Modal(document.getElementById('modalCarrito'));
+    renderizarItemsCarrito();
+    modal.show();
+}
+
+function renderizarItemsCarrito() {
+    const contenedor = document.getElementById('items-carrito');
+    let html = '';
+    let total = 0;
+    
+    if (carrito.length === 0) {
+        contenedor.innerHTML = '<p class="text-center text-muted">Tu carrito está vacío</p>';
+        document.getElementById('total-carrito').textContent = 'Bs. 0,00';
+        return;
+    }
+    
+    carrito.forEach((item, index) => {
+        const subtotal = item.precio * item.cantidad;
+        total += subtotal;
+        
+        html += `
+            <div class="d-flex justify-content-between align-items-center mb-3 p-2 bg-light rounded">
+                <div class="flex-grow-1">
+                    <h6 class="mb-0 text-uppercase">${item.nombre}</h6>
+                    <small class="text-muted">${item.categoria}</small>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-sm btn-outline-secondary" onclick="cambiarCantidad(${index}, -1)">-</button>
+                    <span class="fw-bold">${item.cantidad}</span>
+                    <button class="btn btn-sm btn-outline-secondary" onclick="cambiarCantidad(${index}, 1)">+</button>
+                    <span class="fw-bold ms-2" style="min-width: 80px; text-align: right;">Bs. ${subtotal.toFixed(2)}</span>
+                    <button class="btn btn-sm btn-outline-danger" onclick="eliminarItem(${index})"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+        `;
+    });
+    
+    contenedor.innerHTML = html;
+    document.getElementById('total-carrito').textContent = 'Bs. ' + total.toFixed(2).replace('.', ',');
+}
+
+function cambiarCantidad(index, delta) {
+    carrito[index].cantidad += delta;
+    if (carrito[index].cantidad <= 0) {
+        carrito.splice(index, 1);
+    }
+    renderizarItemsCarrito();
+    actualizarCarrito();
+}
+
+function eliminarItem(index) {
+    carrito.splice(index, 1);
+    renderizarItemsCarrito();
+    actualizarCarrito();
+}
+
+function vaciarCarrito() {
+    carrito = [];
+    renderizarItemsCarrito();
+    actualizarCarrito();
+}
+
+function enviarPedidoWhatsApp() {
+    if (carrito.length === 0) {
+        alert('Tu carrito está vacío');
+        return;
+    }
+    
+    const direccion = document.getElementById('direccion-entrega').value;
+    const telefono = document.getElementById('telefono-pedido').value;
+    const notas = document.getElementById('notas-pedido').value;
+    
+    if (!direccion || !telefono) {
+        alert('Por favor completa tu dirección y teléfono');
+        return;
+    }
+    
+    let mensaje = '*🍹 PEDIDO ZERO SED*%0A%0A';
+    
+    carrito.forEach(item => {
+        mensaje += `• ${item.cantidad}x ${item.nombre} - Bs. ${(item.precio * item.cantidad).toFixed(2)}%0A`;
+    });
+    
+    const total = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
+    mensaje += `%0A*Total: Bs. ${total.toFixed(2)}*%0A`;
+    mensaje += `%0A📍 *Dirección:* ${direccion}%0A`;
+    mensaje += `📞 *Teléfono:* ${telefono}%0A`;
+    if (notas) mensaje += `📝 *Notas:* ${notas}%0A`;
+    mensaje += `%0A¡Gracias por elegir ZERO SED! 🌿`;
+    
+    // ✅ TU NÚMERO REAL: 62422889 (Bolivia = +591)
+    const url = `https://wa.me/59162422889?text=${mensaje}`;
+    window.open(url, '_blank');
+}
+
+// Filtros de categorías
+function filtrarMenu(categoria) {
+    // Actualizar botones activos
+    document.querySelectorAll('#menu-filtros button').forEach(btn => {
+        btn.classList.remove('btn-primary', 'active');
+        btn.classList.add('btn-outline-primary');
+    });
+    event.target.classList.remove('btn-outline-primary');
+    event.target.classList.add('btn-primary', 'active');
+    
+    // Mostrar/ocultar categorías
+    const categorias = document.querySelectorAll('.categoria-menu');
+    categorias.forEach(cat => {
+        if (categoria === 'todos' || cat.dataset.categoria === categoria) {
+            cat.style.display = 'block';
+        } else {
+            cat.style.display = 'none';
+        }
+    });
+}
+</script>
+
+
+
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control bg-transparent p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row">
+                    <!-- Columna 1: Branding -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h1 class="text-primary">ZERO<span class="text-dark">SED</span></h1>
+                            <p class="lh-lg mb-4">Bebidas naturales y saludables con delivery especializado en el Macrodistrito Centro de La Paz. Refresca tu día sin complicaciones.</p>
+                            <div class="footer-icon d-flex">
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href="https://facebook.com/zerosed"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href="https://tiktok.com/@zerosed"><i class="fab fa-tiktok"></i></a>
+                                <a href="https://instagram.com/zerosed" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i class="fab fa-instagram"></i></a>
+                                <a href="https://wa.me/591XXXXXXXX" class="btn btn-primary btn-sm-square rounded-circle"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna 2: Productos Principales -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Nuestros Productos</h4>
+                            <div class="d-flex flex-column align-items-start">
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Jugos de Frutas</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Jugos de Verduras</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Smoothies</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Bebidas Energizantes</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Mocktails</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Té Helado e Infusiones</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Aguas Saborizadas</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna 3: Contacto -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Contáctanos</h4>
+                            <div class="d-flex flex-column align-items-start">
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i> Macrodistrito Centro, La Paz, Bolivia</p>
+                                <p><i class="fa fa-phone-alt text-primary me-2"></i> (+591) 7XX-XXXXX</p>
+                                <p><i class="fas fa-envelope text-primary me-2"></i> contacto@zerosed.bo</p>
+                                <p><i class="fa fa-clock text-primary me-2"></i> Lunes a Sábado: 8:00 - 20:00</p>
+                                <p><i class="fab fa-whatsapp text-primary me-2"></i> Pedidos por WhatsApp Business</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna 4: Galería Social -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Galería</h4>
+                            <div class="row g-2">
+                                <div class="col-4">
+                                    <img src="img/fru01.png" class="img-fluid rounded-circle border border-primary p-2" alt="Jugo de Naranja">
+                                </div>
+                                <div class="col-4">
+                                    <img src="img/ver 02.png" class="img-fluid rounded-circle border border-primary p-2" alt="Smoothie Frutilla">
+                                </div>
+                                <div class="col-4">
+                                    <img src="img/mok 01.png" class="img-fluid rounded-circle border border-primary p-2" alt="Jugo Verde">
+                                </div>
+                                <div class="col-4">
+                                    <img src="img/te hel 04.png" class="img-fluid rounded-circle border border-primary p-2" alt="Mojito Zero">
+                                </div>
+                                <div class="col-4">
+                                    <img src="img/ener 02.png" class="img-fluid rounded-circle border border-primary p-2" alt="Energía Cítrica">
+                                </div>
+                                <div class="col-4">
+                                    <img src="img/smoo 02.png" class="img-fluid rounded-circle border border-primary p-2" alt="Agua Pepino-Limón">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>TECNOLOGIA DE LA INFORMACIÓN Y COMUNICACIÓN II</a>, TECNO SAPIENS </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
